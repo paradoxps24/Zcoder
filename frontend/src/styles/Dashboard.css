@@ -1,0 +1,228 @@
+.dashboard-page {
+  background-color: #f4f8fb;
+  color: #222;
+  padding: 90px 0 32px 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-page h1 {
+  color: #2563eb;
+  margin-bottom: 28px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+  background: #f9fafb;
+  border: 2px solid #e0e7ef;
+  border-radius: 18px;
+  padding: 24px 18px;
+  justify-content: center;
+}
+
+.tag-button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background-color: #e0e7ff;
+  border: 1.5px solid#2563eb;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.06);
+  letter-spacing: 0.2px;
+}
+
+.tag-button:hover {
+  background-color: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.10);
+}
+
+.tag-button.selected {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.10);
+}
+
+.filter-mode-toggle {
+  margin-bottom: 1.5rem;
+  color: #2563eb;
+  text-align: center;
+}
+
+.filter-mode-toggle p {
+  margin-bottom: 8px;
+  color:white;
+}
+
+.filter-mode-toggle button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.10);
+}
+
+.filter-mode-toggle button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.10);
+}
+
+.tag-filters p {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.problems-container {
+  margin-top: 32px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08), 0 1.5px 8px rgba(0,0,0,0.04);
+  padding: 2.5rem 2rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.problem-card {
+  background: white;
+  border-left: 6px solid black;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.2);
+  padding: 1.7rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s, background 0.2s;
+  position: relative;
+}
+
+.problem-card:hover {
+  border-left: 6px solid black;
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.3);
+  background:white;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.problem-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.5px;
+}
+
+.problem-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1rem;
+  color: #94a3b8;
+  flex-wrap: wrap;
+}
+
+.problem-meta .source {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.98rem;
+  background: black;
+  padding: 2px 10px;
+  border-radius: 8px;
+  margin-right: 8px;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.2);
+}
+
+.problem-meta .difficulty {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 0.98rem;
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.problem-meta .difficulty.easy {
+  background: #064e3b;
+  color: #34d399;
+}
+.problem-meta .difficulty.medium {
+  background: #713f12;
+  color: #fbbf24;
+}
+.problem-meta .difficulty.hard {
+  background: #7f1d1d;
+  color: #f87171;
+}
+
+.problem-meta .accuracy {
+  color: black;
+  font-weight: 500;
+  font-size: 0.98rem;
+  background: #334155;
+  padding: 2px 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.2);
+}
+
+.no-problems {
+  color: #64748b;
+  text-align: center;
+  padding: 24px;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .problems-container {
+    padding: 1.5rem 0.5rem;
+  }
+  .problem-card {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-page h1 {
+    font-size: 1.7rem;
+  }
+  .problems-container {
+    padding: 1rem 0.2rem;
+  }
+  .tag-container {
+    gap: 6px;
+  }
+  .tag-button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  .problem-card {
+    padding: 1rem 0.7rem;
+  }
+}
